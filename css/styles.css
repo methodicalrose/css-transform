@@ -1,11 +1,11 @@
 .scale {
     width: 60px;
     height: 60px;
-    margin: auto;
+    float: right;
     border: 1px solid blue;
 
     /* increases width x10, height x2 */
-    transform: scale(10, 2); 
+    /* transform: scale(10, 2);  */
 
     /* decreases width by 1/2, height by 1/4 */
     /* transform: scale(0.5, 0.25); */
@@ -17,4 +17,62 @@
     /* flips the y-axis */
     /* transform: scale(1, -5);
     transform: scaleY(-5); */
+}
+
+.box {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.skew-x-20 {
+    transform: skewX(20deg);
+    animation: disappearing-act 3s infinite;
+    animation-direction: alternate;
+}
+
+.skew-x-neg-20 {
+    /* transform: skewX(-20deg); */
+    animation: skew-horizontal 1s infinite;
+    animation-direction: alternate;
+}
+
+.skew-y-20 {
+    transform: skewY(20deg);
+    animation: disappearing-act 3s infinite;
+    animation-direction: alternate;
+}
+
+.skew-y-neg-20 {
+    animation: skew-vertical 1s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes skew-horizontal {
+    0% {
+        transform: skewX(20deg);
+    }
+    100% {
+        transform: skewX(-20deg);
+    }
+}
+
+@keyframes skew-vertical {
+    0% {
+        transform: skewY(-20deg);
+    }
+    100% {
+        transform: skewY(20deg);
+    }
+}
+
+@keyframes disappearing-act {
+    0% {
+        opacity: 100%; 
+    }
+    100% {
+        opacity: 0%;
+    }
 }
