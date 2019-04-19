@@ -1,0 +1,20 @@
+.scale {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border: 1px solid blue;
+
+    /* increases width x10, height x2 */
+    transform: scale(10, 2); 
+
+    /* decreases width by 1/2, height by 1/4 */
+    /* transform: scale(0.5, 0.25); */
+
+    /* flips the x-axis */
+    /* transform: scale(-5, 1);
+    transform: scaleX(-5); */
+
+    /* flips the y-axis */
+    /* transform: scale(1, -5);
+    transform: scaleY(-5); */
+}
